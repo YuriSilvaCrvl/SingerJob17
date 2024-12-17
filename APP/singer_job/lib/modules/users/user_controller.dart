@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 
-class ApiService {
+class UserController {
   final Dio _dio = Dio(BaseOptions(baseUrl: "http://localhost:3000"));
 
   // -----------------------------------------
@@ -342,7 +342,8 @@ class ApiService {
   // Notificações Services
   // -----------------------------------------
 
-  Future<dynamic> createNotificacao(Map<String, dynamic> notificacaoData) async {
+  Future<dynamic> createNotificacao(
+      Map<String, dynamic> notificacaoData) async {
     try {
       final response = await _dio.post(
         "/createNotificacoes",
@@ -399,11 +400,12 @@ class ApiService {
         queryParameters: {'id_notificacao': idNotificacao},
       );
       return response.data;
-    } catch (e)      {
+    } catch (e) {
       print("Erro ao deletar notificação: $e");
       throw e;
     }
   }
+
   Future<dynamic> createPostagem(Map<String, dynamic> postagemData) async {
     try {
       final response = await _dio.post(
@@ -467,4 +469,3 @@ class ApiService {
     }
   }
 }
-

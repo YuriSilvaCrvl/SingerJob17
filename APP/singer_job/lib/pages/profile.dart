@@ -26,11 +26,11 @@ class Profile extends StatelessWidget {
           ),
           ContainerInformatioProfile(
             keyInformation: "Nome",
-            valueInformation: "Danilo Souza Silva",
+            valueInformation: "Yuri Silva Carvalho",
           ),
           ContainerInformatioProfile(
             keyInformation: "Email",
-            valueInformation: "ds5695749@gmail.com",
+            valueInformation: "yurisilva@gmail.com",
           ),
           ContainerInformatioProfile(
             keyInformation: "Segmento:",
@@ -50,7 +50,7 @@ class Profile extends StatelessWidget {
                 ButtonComponent(
                   placeholder: "Sair",
                   routePath: AppCoreRoutes.loginPage,
-                  colorButton: Colors.red,
+                  colorButton: Color.fromARGB(255, 202, 94, 86),
                 ),
               ],
             ),

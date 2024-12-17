@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 height: 50,
                 child: FutureBuilder(
-                  future: controler.getAllUsers(""),
+                  future: controler.getAllArtistas(),
                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
                       return const CircularProgressIndicator();
@@ -84,7 +84,7 @@ class HomePage extends StatelessWidget {
                 child: SizedBox(
                     height: 60,
                     child: FutureBuilder(
-                      future: controler.getAllSuggestionArtist(),
+                      future: controler.getAllArtistas(),
                       builder: (BuildContext context, AsyncSnapshot snapshot) {
                         if (snapshot.connectionState ==
                             ConnectionState.waiting) {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:singer_job/components/modal.dart';
 import 'package:singer_job/modules/users/entities/artista.dart';
@@ -41,7 +40,7 @@ class RequestSingerJob extends StatelessWidget {
             child: SizedBox(
                 height: 60,
                 child: FutureBuilder(
-                  future: controler.getAllSuggestionArtist(),
+                  future: controler.getAllAvaliacoes(),
                   builder: (BuildContext context, AsyncSnapshot snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
                       return const CircularProgressIndicator();
@@ -74,7 +73,7 @@ class RequestSingerJob extends StatelessWidget {
                                 Padding(
                                   padding:
                                       const EdgeInsets.symmetric(vertical: 10),
-                                  child: Container(
+                                  child: SizedBox(
                                     width: widthDeviceScreen,
                                     child: Column(
                                       crossAxisAlignment:
@@ -109,8 +108,9 @@ class RequestSingerJob extends StatelessWidget {
                                               ),
                                             ),
                                             InkWell(
-                                              onTap: () => modalDialog
-                                                  .dialogBuilder(context, data[index]),
+                                              onTap: () =>
+                                                  modalDialog.dialogBuilder(
+                                                      context, data[index]),
                                               child: Container(
                                                 height: 94,
                                                 width: 94,

@@ -13,9 +13,9 @@ class AppModule extends Module {
     ///// controller
     i.addSingleton(
       () => UserController(
-        getAllUsersUseCase: i.get<GetAllUsers>(),
-        getAllSuggestionArtistUseCase: i.get<ArtistSuggestionUsecase>(),
-      ),
+          // getAllArtisticUseCase: i.get<GetAllUsers>(),
+          // getAllSuggestionArtistUseCase: i.get<ArtistSuggestionUsecase>(),
+          ),
     );
 
     ///// UseCases
